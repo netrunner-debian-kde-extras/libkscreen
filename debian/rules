@@ -2,10 +2,7 @@
 # -*- makefile -*-
 
 %:
-	dh $@ \
-	  --list-missing \
-	  --with=pkgkde-symbolshelper \
-	  --parallel
+	dh $@ --with=pkgkde-symbolshelper --parallel
 
 override_dh_auto_test:
 	# requires an X server
