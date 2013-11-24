@@ -1,0 +1,5 @@
+libkscreen (1.0.2-1) unstable; urgency=low
+
+  * Initial package (Closes: #730356)
+
+ -- Rohan Garg <rohan@kde.org>  Sat, 23 Nov 2013 06:51:18 +1100
