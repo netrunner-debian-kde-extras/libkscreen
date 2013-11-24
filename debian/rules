@@ -11,9 +11,9 @@
 
 %:
 	dh $@ --dbg-package=libkscreen-dbg \
-	--list-missing \
-	--with=pkgkde-symbolshelper
-#	--parallel \
+	  --list-missing \
+	  --with=pkgkde-symbolshelper \
+	  --parallel
 
 override_dh_auto_test:
 	# requires an X server
