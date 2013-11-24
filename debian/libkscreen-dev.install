@@ -1,6 +1,4 @@
-usr/include/*
-#usr/lib/lib*.a
-usr/lib/lib*.so
-usr/lib/cmake/LibKScreen/*
-usr/lib/pkgconfig/*
-#usr/share/pkgconfig/*
+usr/include/kscreen/
+usr/lib/libkscreen.so
+usr/lib/cmake/LibKScreen/
+usr/lib/pkgconfig/kscreen.pc

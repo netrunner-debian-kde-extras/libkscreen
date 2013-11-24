@@ -1,2 +1,2 @@
-usr/lib/lib*.so.*
-usr/lib/kde4/plugins/
+usr/lib/libkscreen.so.1*
+usr/lib/kde4/plugins/kscreen/
