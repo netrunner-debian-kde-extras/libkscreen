@@ -19,7 +19,6 @@ Description: library for screen management - development files
  This package contains the files necessary for development.
 
 Package: libkscreen1
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: library for screen management - shared library
