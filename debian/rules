@@ -9,3 +9,6 @@
 
 override_dh_auto_test:
 	# requires an X server
+
+override_dh_install:
+	dh_install --fail-missing
