@@ -1,6 +1,6 @@
 usr/include/*
 #usr/lib/lib*.a
-usr/lib/*/lib*.so
+usr/lib/*/libkscreen.so
 usr/lib/cmake/LibKScreen/*
 usr/lib/*/pkgconfig/*
 #usr/share/pkgconfig/*
