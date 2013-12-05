@@ -1,0 +1,44 @@
+Index: libkscreen/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/CMakeLists.txt	2013-12-05 18:59:52.814934202 +0100
++++ libkscreen/CMakeLists.txt	2013-12-05 19:29:31.047662754 +0100
+@@ -54,10 +54,14 @@
+ 
+ set(BIN_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/bin)
+ set(LIB_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX})
++set(LIB_DESTINATION "${LIB_INSTALL_DIR}" CACHE STRING
++    "Library directory name")
++set(PKGCONFIG_INSTALL_PREFIX "${LIB_DESTINATION}/pkgconfig/" CACHE STRING
++    "Base directory for pkgconfig files")
+ 
+ set(INSTALL_TARGETS_DEFAULT_ARGS  RUNTIME DESTINATION "${BIN_INSTALL_DIR}"
+-                                  LIBRARY DESTINATION "${LIB_INSTALL_DIR}"
+-                                  ARCHIVE DESTINATION "${LIB_INSTALL_DIR}" COMPONENT Devel )
++                                  LIBRARY DESTINATION "${LIB_DESTINATION}"
++                                  ARCHIVE DESTINATION "${LIB_DESTINATION}" COMPONENT Devel )
+ 
+ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${QT_INCLUDES} ${KDE4_INCLUDES})
+ 
+Index: libkscreen/src/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/src/CMakeLists.txt	2013-12-05 18:59:52.814934202 +0100
++++ libkscreen/src/CMakeLists.txt	2013-12-05 19:28:42.000000000 +0100
+@@ -34,5 +34,6 @@
+ 
+ if(NOT WIN32)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/kscreen.pc.in ${CMAKE_CURRENT_BINARY_DIR}/kscreen.pc @ONLY)
+-   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kscreen.pc DESTINATION ${LIB_INSTALL_DIR}/pkgconfig)
++   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kscreen.pc DESTINATION
++       ${PKGCONFIG_INSTALL_PREFIX})
+ endif(NOT WIN32)
+Index: libkscreen/src/kscreen.pc.in
+===================================================================
+--- libkscreen.orig/src/kscreen.pc.in	2013-12-05 16:16:41.965284266 +0100
++++ libkscreen/src/kscreen.pc.in	2013-12-05 19:31:25.730012516 +0100
+@@ -1,5 +1,5 @@
+ prefix=@CMAKE_INSTALL_PREFIX@
+-libdir=@LIB_INSTALL_DIR@
++libdir=@LIB_DESTINATION@
+ includedir=@CMAKE_INSTALL_PREFIX@/include
+ 
+ Name: kscreen

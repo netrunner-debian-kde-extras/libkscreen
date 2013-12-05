@@ -1,4 +1,4 @@
 usr/include/kscreen/
-usr/lib/libkscreen.so
 usr/lib/cmake/LibKScreen/
-usr/lib/pkgconfig/kscreen.pc
+usr/lib/*/libkscreen.so
+usr/lib/*/pkgconfig/kscreen.pc

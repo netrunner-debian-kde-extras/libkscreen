@@ -1,19 +1,4 @@
 TODO:
 
-	o Fix lintian complains
-
 	* WORKAROUND: qjson's symbols say 0.7.1 is enonugh but upstream wants
 	  >= 0.8.0 use shlibs.local to bump dependency to >=0.8.0
-
-
-	* check dependencies of -dbg pkg.  In principle ?? should it recommend
-	  all -dbg pkgs of libraries referenced in libkscreen0 ????
-
-	* debian/copyright:
-		* Fix/find correct name for my abbrev. GPL-KDEeV
-		* how to treat GPL-kdeev? AFAIU it's GPL+ Just with non-usual
-		  (but allowed) copyright reference to KDE e.V.
-
-	o add library symbol handling: pkgkde-symbolshelper
-		Makes no sense yet as API breaks/changes frequently
-		Postpone until upstream makes a statement

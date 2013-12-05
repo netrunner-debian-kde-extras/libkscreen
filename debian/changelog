@@ -1,5 +1,10 @@
 libkscreen (1.0.2-1) unstable; urgency=low
 
-  * Initial package (Closes: #730356)
+  [ Rohan Garg ]
+  * Initial package (Closes: #731478)
 
- -- Rohan Garg <rohan@kde.org>  Sat, 23 Nov 2013 06:51:18 +1100
+  [ Maximiliano Curia ]
+  * New patch: libdir.diff, install in the m-a paths.
+  * New patch: plugins_in_ma_paths.diff.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 05 Dec 2013 12:52:48 +0100

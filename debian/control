@@ -1,13 +1,41 @@
 Source: libkscreen
+Section: libs
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Felix Geyer <fgeyer@debian.org>, Rohan Garg <rohan@kde.org>
-Build-Depends: debhelper (>= 9), cmake, kdelibs5-dev, libqjson-dev (>= 0.8.0), libxrandr-dev, pkg-kde-tools, pkg-config, libx11-xcb-dev, libxcb-render-util0-dev, libxcb-image0-dev, libxcb-randr0-dev, libxcb-composite0-dev, libxcb-damage0-dev, libxcb-shape0-dev, libxcb-shm0-dev, libxcb-sync0-dev, libxcb-xfixes0-dev, libxcb1-dev, xcb-proto
-Standards-Version: 3.9.4
-Section: libs
-Homepage: https://projects.kde.org/projects/playground/libs/libkscreen
+Uploaders: Felix Geyer <fgeyer@debian.org>,
+           Rohan Garg <rohan@kde.org>,
+           Maximiliano Curia <maxy@debian.org>
+Build-Depends: debhelper (>= 9),
+               cmake (>= 2.8.0),
+               pkg-kde-tools,
+               kdelibs5-dev,
+               libqjson-dev (>= 0.8.0),
+               libxrandr-dev,
+               pkg-config,
+               libx11-xcb-dev,
+               libxcb1-dev,
+               libxcb-composite0-dev,
+               libxcb-damage0-dev,
+               libxcb-dri2-0-dev,
+               libxcb-ewmh-dev,
+               libxcb-glx0-dev,
+               libxcb-icccm4-dev,
+               libxcb-image0-dev,
+               libxcb-randr0-dev,
+               libxcb-render0-dev,
+               libxcb-render-util0-dev,
+               libxcb-shape0-dev,
+               libxcb-shm0-dev,
+               libxcb-sync0-dev,
+               libxcb-util0-dev,
+               libxcb-xfixes0-dev,
+               libxcb-xtest0-dev,
+               libxcb-xv0-dev,
+               xcb-proto
+Standards-Version: 3.9.5
+Homepage: https://projects.kde.org/projects/extragear/libs/libkscreen
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/libkscreen.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/libkscreen.git;a=summary
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/libkscreen.git
 
 Package: libkscreen-dev
 Section: libdevel
@@ -22,6 +50,8 @@ Description: library for screen management - development files
 
 Package: libkscreen1
 Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: library for screen management - shared library
  The KDE multiple monitor support is trying be as smart as possible
@@ -34,12 +64,13 @@ Package: libkscreen-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Recommends: libqt4-dbg
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, libkscreen1 (= ${binary:Version})
+Recommends: libqt4-dbg
 Description: library for screen management - debug info
  The KDE multiple monitor support is trying be as smart as possible
  adapting the behavior of it to each use case making the configuration
  of monitors as simple as plugging them to your computer.
  .
  This package contains the debugging symbols.
-

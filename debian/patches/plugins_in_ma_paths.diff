@@ -1,0 +1,86 @@
+Index: libkscreen/src/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/src/CMakeLists.txt	2013-12-05 20:33:23.935292393 +0100
++++ libkscreen/src/CMakeLists.txt	2013-12-05 20:33:23.931292309 +0100
+@@ -10,6 +10,9 @@
+     mode.cpp
+ )
+ 
++add_definitions( -DADDITIONAL_PLUGINS_PATH="${LIB_DESTINATION}/kde4/plugins" )
++add_definitions( -DKSCREEN_MAJOR="${libkscreen_VERSION_MAJOR}" )
++
+ qt4_automoc(${libkscreen_SRCS})
+ 
+ add_library(kscreen SHARED ${libkscreen_SRCS})
+Index: libkscreen/src/backendloader.cpp
+===================================================================
+--- libkscreen.orig/src/backendloader.cpp	2013-12-05 20:33:23.935292393 +0100
++++ libkscreen/src/backendloader.cpp	2013-12-05 20:33:23.931292309 +0100
+@@ -39,9 +39,20 @@
+     const QString backend = qgetenv("KSCREEN_BACKEND").constData();
+     const QString backendFilter = QString::fromLatin1("KSC_%1*").arg(backend);
+ 
++#ifdef ADDITIONAL_PLUGINS_PATH
++    QCoreApplication::addLibraryPath(ADDITIONAL_PLUGINS_PATH);
++#endif
++
+     const QStringList paths = QCoreApplication::libraryPaths();
+     Q_FOREACH (const QString &path, paths) {
+-        const QDir dir(path + QDir::separator() + QLatin1String("kscreen"),
++        kWarning() << path; // TODO: remove me
++        const QDir dir(path + QDir::separator() +
++                              QLatin1String("kscreen")
++#ifdef KSCREEN_MAJOR
++                              + QDir::separator() +
++                              QLatin1String(KSCREEN_MAJOR)
++#endif
++                              ,
+                        backendFilter,
+                        QDir::SortFlags(QDir::QDir::NoSort),
+                        QDir::NoDotAndDotDot | QDir::Files);
+Index: libkscreen/backends/fake/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/backends/fake/CMakeLists.txt	2013-12-05 20:33:23.935292393 +0100
++++ libkscreen/backends/fake/CMakeLists.txt	2013-12-05 20:33:23.931292309 +0100
+@@ -17,6 +17,6 @@
+                                kscreen
+ )
+ 
+-install(TARGETS KSC_Fake DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/kscreen/)
++install(TARGETS KSC_Fake DESTINATION ${KSCREEN_PLUGIN_DIR})
+ 
+ 
+Index: libkscreen/backends/xrandr/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/backends/xrandr/CMakeLists.txt	2013-12-05 20:33:23.935292393 +0100
++++ libkscreen/backends/xrandr/CMakeLists.txt	2013-12-05 20:33:23.931292309 +0100
+@@ -26,4 +26,4 @@
+                                  kscreen
+ )
+ 
+-install(TARGETS KSC_XRandR DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/kscreen/)
++install(TARGETS KSC_XRandR DESTINATION ${KSCREEN_PLUGIN_DIR})
+Index: libkscreen/backends/xrandr1.1/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/backends/xrandr1.1/CMakeLists.txt	2013-12-05 20:33:23.935292393 +0100
++++ libkscreen/backends/xrandr1.1/CMakeLists.txt	2013-12-05 20:33:23.931292309 +0100
+@@ -27,4 +27,4 @@
+                                    kscreen
+ )
+ 
+-install(TARGETS KSC_XRandR11 DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/kscreen/)
++install(TARGETS KSC_XRandR11 DESTINATION ${KSCREEN_PLUGIN_DIR})
+Index: libkscreen/CMakeLists.txt
+===================================================================
+--- libkscreen.orig/CMakeLists.txt	2013-12-05 20:33:14.959103710 +0100
++++ libkscreen/CMakeLists.txt	2013-12-05 20:33:36.107549177 +0100
+@@ -58,6 +58,9 @@
+     "Library directory name")
+ set(PKGCONFIG_INSTALL_PREFIX "${LIB_DESTINATION}/pkgconfig/" CACHE STRING
+     "Base directory for pkgconfig files")
++set(KSCREEN_PLUGIN_DIR
++    "${LIB_DESTINATION}/kde4/plugins/kscreen/${libkscreen_VERSION_MAJOR}/"
++    CACHE STRING "Base directory for plugins files")
+ 
+ set(INSTALL_TARGETS_DEFAULT_ARGS  RUNTIME DESTINATION "${BIN_INSTALL_DIR}"
+                                   LIBRARY DESTINATION "${LIB_DESTINATION}"
