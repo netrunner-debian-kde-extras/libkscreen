@@ -1,5 +1,6 @@
 libkscreen (1.0.2-1) UNRELEASED; urgency=low
 
   * Initial release.
+  * New patch: libdir.diff, install in the m-a paths.
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 05 Dec 2013 12:52:48 +0100
