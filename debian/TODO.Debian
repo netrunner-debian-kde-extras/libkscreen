@@ -1,0 +1,4 @@
+TODO:
+
+	* WORKAROUND: qjson's symbols say 0.7.1 is enonugh but upstream wants
+	  >= 0.8.0 use shlibs.local to bump dependency to >=0.8.0
