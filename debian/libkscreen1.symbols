@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 1.0 amd64 i386
+# SymbolsHelper-Confirmed: 1.0.2 amd64
 KSC_Fake.so libkscreen1 #MINVER#
  qt_plugin_instance@Base 1.0
  qt_plugin_query_verification_data@Base 1.0
@@ -16,6 +16,7 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen13ConfigMonitor16staticMetaObjectE@Base 1.0
  _ZN7KScreen13ConfigMonitor20configurationChangedEv@Base 1.0
  _ZN7KScreen13ConfigMonitor7Private13updateConfigsEv@Base 1.0
+ _ZN7KScreen13ConfigMonitor7Private25_k_configurationDestroyedEP7QObject@Base 1.0.2
  _ZN7KScreen13ConfigMonitor8instanceEv@Base 1.0
  _ZN7KScreen13ConfigMonitor9addConfigEPNS_6ConfigE@Base 1.0
  _ZN7KScreen13ConfigMonitorC1Ev@Base 1.0
@@ -28,8 +29,10 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen4Edid16staticMetaObjectE@Base 1.0
  (subst)_ZN7KScreen4Edid7Private5parseEPKh{size_t}@Base 1.0
  (subst)_ZN7KScreen4EdidC1EPKh{size_t}P7QObject@Base 1.0
+ _ZN7KScreen4EdidC1EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen4EdidC1Ev@Base 1.0
  (subst)_ZN7KScreen4EdidC2EPKh{size_t}P7QObject@Base 1.0
+ _ZN7KScreen4EdidC2EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen4EdidC2Ev@Base 1.0
  _ZN7KScreen4EdidD0Ev@Base 1.0
  _ZN7KScreen4EdidD1Ev@Base 1.0
@@ -43,22 +46,30 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen4Mode7setNameERK7QString@Base 1.0
  _ZN7KScreen4Mode7setSizeERK5QSize@Base 1.0
  _ZN7KScreen4ModeC1EP7QObject@Base 1.0
+ _ZN7KScreen4ModeC1EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen4ModeC2EP7QObject@Base 1.0
+ _ZN7KScreen4ModeC2EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen4ModeD0Ev@Base 1.0
  _ZN7KScreen4ModeD1Ev@Base 1.0
  _ZN7KScreen4ModeD2Ev@Base 1.0
  _ZN7KScreen6Config10setOutputsE5QHashIiPNS_6OutputEE@Base 1.0
  _ZN7KScreen6Config11loadBackendEv@Base 1.0
+ _ZN7KScreen6Config11outputAddedEPNS_6OutputE@Base 1.0.2
  _ZN7KScreen6Config11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.0
  _ZN7KScreen6Config11qt_metacastEPKc@Base 1.0
  _ZN7KScreen6Config12canBeAppliedEPS0_@Base 1.0
+ _ZN7KScreen6Config12removeOutputEi@Base 1.0.2
+ _ZN7KScreen6Config13outputRemovedEi@Base 1.0.2
  _ZN7KScreen6Config16staticMetaObjectE@Base 1.0
  _ZN7KScreen6Config7currentEv@Base 1.0
  _ZN7KScreen6Config8setValidEb@Base 1.0
+ _ZN7KScreen6Config9addOutputEPNS_6OutputE@Base 1.0.2
  _ZN7KScreen6Config9setConfigEPS0_@Base 1.0
  _ZN7KScreen6Config9setScreenEPNS_6ScreenE@Base 1.0
  _ZN7KScreen6ConfigC1EP7QObject@Base 1.0
+ _ZN7KScreen6ConfigC1EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen6ConfigC2EP7QObject@Base 1.0
+ _ZN7KScreen6ConfigC2EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen6ConfigD0Ev@Base 1.0
  _ZN7KScreen6ConfigD1Ev@Base 1.0
  _ZN7KScreen6ConfigD2Ev@Base 1.0
@@ -86,8 +97,11 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen6Output7setTypeENS0_4TypeE@Base 1.0
  _ZN7KScreen6Output8setModesE5QHashI7QStringPNS_4ModeEE@Base 1.0
  _ZN7KScreen6Output9setClonesE5QListIiE@Base 1.0
+ _ZN7KScreen6Output9setSizeMmERK5QSize@Base 1.0.2
  _ZN7KScreen6OutputC1EP7QObject@Base 1.0
+ _ZN7KScreen6OutputC1EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen6OutputC2EP7QObject@Base 1.0
+ _ZN7KScreen6OutputC2EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen6OutputD0Ev@Base 1.0
  _ZN7KScreen6OutputD1Ev@Base 1.0
  _ZN7KScreen6OutputD2Ev@Base 1.0
@@ -100,7 +114,9 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen6Screen18currentSizeChangedEv@Base 1.0
  _ZN7KScreen6Screen5setIdEi@Base 1.0
  _ZN7KScreen6ScreenC1EP7QObject@Base 1.0
+ _ZN7KScreen6ScreenC1EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen6ScreenC2EP7QObject@Base 1.0
+ _ZN7KScreen6ScreenC2EPNS0_7PrivateE@Base 1.0.2
  _ZN7KScreen6ScreenD0Ev@Base 1.0
  _ZN7KScreen6ScreenD1Ev@Base 1.0
  _ZN7KScreen6ScreenD2Ev@Base 1.0
@@ -110,6 +126,7 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZNK7KScreen4Edid4blueEv@Base 1.0
  _ZNK7KScreen4Edid4hashEv@Base 1.0
  _ZNK7KScreen4Edid4nameEv@Base 1.0
+ _ZNK7KScreen4Edid5cloneEv@Base 1.0.2
  _ZNK7KScreen4Edid5gammaEv@Base 1.0
  _ZNK7KScreen4Edid5greenEv@Base 1.0
  _ZNK7KScreen4Edid5pnpIdEv@Base 1.0
@@ -130,9 +147,11 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZNK7KScreen4Mode2idEv@Base 1.0
  _ZNK7KScreen4Mode4nameEv@Base 1.0
  _ZNK7KScreen4Mode4sizeEv@Base 1.0
+ _ZNK7KScreen4Mode5cloneEv@Base 1.0.2
  _ZNK7KScreen6Config10metaObjectEv@Base 1.0
  _ZNK7KScreen6Config13primaryOutputEv@Base 1.0
  _ZNK7KScreen6Config16connectedOutputsEv@Base 1.0
+ _ZNK7KScreen6Config5cloneEv@Base 1.0.2
  _ZNK7KScreen6Config6outputEi@Base 1.0
  _ZNK7KScreen6Config6screenEv@Base 1.0
  _ZNK7KScreen6Config7isValidEv@Base 1.0
@@ -151,8 +170,10 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZNK7KScreen6Output4modeERK7QString@Base 1.0
  _ZNK7KScreen6Output4nameEv@Base 1.0
  _ZNK7KScreen6Output4typeEv@Base 1.0
+ _ZNK7KScreen6Output5cloneEv@Base 1.0.2
  _ZNK7KScreen6Output5modesEv@Base 1.0
  _ZNK7KScreen6Output6clonesEv@Base 1.0
+ _ZNK7KScreen6Output6sizeMmEv@Base 1.0.2
  _ZNK7KScreen6Output7Private11biggestModeERK5QHashI7QStringPNS_4ModeEE@Base 1.0
  _ZNK7KScreen6Output8rotationEv@Base 1.0
  _ZNK7KScreen6Output9isEnabledEv@Base 1.0
@@ -160,6 +181,7 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZNK7KScreen6Screen10metaObjectEv@Base 1.0
  _ZNK7KScreen6Screen11currentSizeEv@Base 1.0
  _ZNK7KScreen6Screen2idEv@Base 1.0
+ _ZNK7KScreen6Screen5cloneEv@Base 1.0.2
  _ZNK7KScreen6Screen7maxSizeEv@Base 1.0
  _ZNK7KScreen6Screen7minSizeEv@Base 1.0
  _ZTIN7KScreen13ConfigMonitorE@Base 1.0
@@ -180,3 +202,5 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZTVN7KScreen6ConfigE@Base 1.0
  _ZTVN7KScreen6OutputE@Base 1.0
  _ZTVN7KScreen6ScreenE@Base 1.0
+ _Zls6QDebugPKN7KScreen4ModeE@Base 1.0.2
+ _Zls6QDebugPKN7KScreen6OutputE@Base 1.0.2
