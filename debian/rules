@@ -4,10 +4,10 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-# export DEB_BUILD_OPTIONS=nocheck
-
 %:
 	dh $@ --dbg-package=libkscreen-dbg \
-	--list-missing \
-	--with kde
+	    --list-missing \
+	    --with kde
 
+# Tests require kscreen
+.PHONY: override_dh_auto_test
