@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<descriptor>
+
+<version>
+    1.0.2
+</version>
+
+<headers>
+    /usr/include/kscreen
+</headers>
+
+<libs>
+    /usr/lib/${DEB_HOST_MULTIARCH}/libkscreen.so
+</libs>
+
+</descriptor>
