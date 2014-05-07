@@ -1,4 +1,4 @@
-libkscreen (1.0.3-1~) UNRELEASED; urgency=medium
+libkscreen (1.0.3-1) unstable; urgency=medium
 
   * New upstream release.
   * Update symbols file.
@@ -6,7 +6,7 @@ libkscreen (1.0.3-1~) UNRELEASED; urgency=medium
   * Add new upstream patch: upstream_02_Don-t-crash-when-printing-a-
     null-KScreen-Output-from.patch
 
- -- Maximiliano Curia <maxy@debian.org>  Wed, 07 May 2014 15:27:27 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 07 May 2014 15:54:56 +0200
 
 libkscreen (1.0.2-1) unstable; urgency=low
 
