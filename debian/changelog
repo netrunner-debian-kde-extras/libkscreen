@@ -1,6 +1,7 @@
 libkscreen (1.0.3-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update symbols file.
 
  -- Maximiliano Curia <maxy@debian.org>  Wed, 07 May 2014 15:09:42 +0200
 

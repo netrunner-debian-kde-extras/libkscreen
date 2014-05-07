@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 1.0.2 amd64
+# SymbolsHelper-Confirmed: 1.0.3 amd64
 KSC_Fake.so libkscreen1 #MINVER#
  qt_plugin_instance@Base 1.0
  qt_plugin_query_verification_data@Base 1.0
@@ -60,7 +60,9 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen6Config12canBeAppliedEPS0_@Base 1.0
  _ZN7KScreen6Config12removeOutputEi@Base 1.0.2
  _ZN7KScreen6Config13outputRemovedEi@Base 1.0.2
+ _ZN7KScreen6Config16setPrimaryOutputEPNS_6OutputE@Base 1.0.3
  _ZN7KScreen6Config16staticMetaObjectE@Base 1.0
+ _ZN7KScreen6Config20primaryOutputChangedEPNS_6OutputE@Base 1.0.3
  _ZN7KScreen6Config7currentEv@Base 1.0
  _ZN7KScreen6Config8setValidEb@Base 1.0
  _ZN7KScreen6Config9addOutputEPNS_6OutputE@Base 1.0.2
@@ -112,6 +114,7 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZN7KScreen6Screen14setCurrentSizeERK5QSize@Base 1.0
  _ZN7KScreen6Screen16staticMetaObjectE@Base 1.0
  _ZN7KScreen6Screen18currentSizeChangedEv@Base 1.0
+ _ZN7KScreen6Screen24setMaxActiveOutputsCountEi@Base 1.0.3
  _ZN7KScreen6Screen5setIdEi@Base 1.0
  _ZN7KScreen6ScreenC1EP7QObject@Base 1.0
  _ZN7KScreen6ScreenC1EPNS0_7PrivateE@Base 1.0.2
@@ -180,6 +183,7 @@ libkscreen.so.1 libkscreen1 #MINVER#
  _ZNK7KScreen6Output9isPrimaryEv@Base 1.0
  _ZNK7KScreen6Screen10metaObjectEv@Base 1.0
  _ZNK7KScreen6Screen11currentSizeEv@Base 1.0
+ _ZNK7KScreen6Screen21maxActiveOutputsCountEv@Base 1.0.3
  _ZNK7KScreen6Screen2idEv@Base 1.0
  _ZNK7KScreen6Screen5cloneEv@Base 1.0.2
  _ZNK7KScreen6Screen7maxSizeEv@Base 1.0
