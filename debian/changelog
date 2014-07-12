@@ -1,4 +1,4 @@
-libkscreen (1.0.4-1~) UNRELEASED; urgency=medium
+libkscreen (1.0.4-1) unstable; urgency=medium
 
   [ Pino Toscano ]
   * Replace the libxcb-sync0-dev build dependency with libxcb-sync-dev.
@@ -11,7 +11,7 @@ libkscreen (1.0.4-1~) UNRELEASED; urgency=medium
     KScreen-Output-from.patch
   * New patch: randr_documented_interface (Closes: #751889)
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 12 Jul 2014 12:17:57 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 12 Jul 2014 12:56:32 +0200
 
 libkscreen (1.0.3-1) unstable; urgency=medium
 
