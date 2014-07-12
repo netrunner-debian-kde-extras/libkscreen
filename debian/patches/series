@@ -1,4 +1,2 @@
 libdir.diff
 plugins_in_ma_paths.diff
-upstream_01_Fix-crash.patch
-upstream_02_Don-t-crash-when-printing-a-null-KScreen-Output-from.patch
