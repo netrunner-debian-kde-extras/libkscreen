@@ -9,6 +9,7 @@ libkscreen (1.0.4-1) UNRELEASED; urgency=medium
   * Remove upstream patch: upstream_01_Fix-crash.patch
   * Remove upstream patch: upstream_02_Don-t-crash-when-printing-a-null-
     KScreen-Output-from.patch
+  * New patch: randr_documented_interface
 
  -- Maximiliano Curia <maxy@debian.org>  Tue, 01 Jul 2014 16:59:26 +0200
 
