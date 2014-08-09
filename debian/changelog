@@ -1,3 +1,10 @@
+libkscreen (1.0.5-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+    - Fixes crash in configuration notification handling. (Closes: #755091)
+
+ -- Felix Geyer <fgeyer@debian.org>  Sat, 09 Aug 2014 11:35:25 +0200
+
 libkscreen (1.0.4-1) unstable; urgency=medium
 
   [ Pino Toscano ]
